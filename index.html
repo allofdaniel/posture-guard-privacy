@@ -3,65 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자세 교정 알리미 - 개인정보처리방침</title>
+    <title>자세 지킴이 (Posture Guard) - 개인정보처리방침</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            line-height: 1.8;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
+            background-color: #0a1a0f;
+            color: #e0e0e0;
         }
         .container {
-            background: white;
+            background: #111;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(25, 230, 107, 0.2);
         }
-        h1 { color: #6366F1; }
-        h2 { color: #333; border-bottom: 2px solid #6366F1; padding-bottom: 10px; }
-        .date { color: #666; font-size: 14px; }
+        h1 { color: #19e66b; font-size: 24px; }
+        h2 { color: #19e66b; border-bottom: 1px solid rgba(25, 230, 107, 0.3); padding-bottom: 8px; margin-top: 30px; font-size: 18px; }
+        .date { color: #888; font-size: 13px; }
+        a { color: #19e66b; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 6px; }
+        .lang-toggle { text-align: right; margin-bottom: 20px; }
+        .lang-toggle a { cursor: pointer; padding: 6px 14px; border: 1px solid #19e66b; border-radius: 6px; text-decoration: none; font-size: 13px; }
+        .en { display: none; }
     </style>
+    <script>
+        function toggleLang() {
+            document.querySelectorAll('.ko').forEach(el => el.style.display = el.style.display === 'none' ? '' : 'none');
+            document.querySelectorAll('.en').forEach(el => el.style.display = el.style.display === 'none' ? '' : 'none');
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>자세 교정 알리미 개인정보처리방침</h1>
-        <p class="date">시행일: 2025년 12월 11일</p>
+        <div class="lang-toggle"><a onclick="toggleLang()">English / 한국어</a></div>
+
+        <!-- 한국어 -->
+        <div class="ko">
+        <h1>자세 지킴이 (Posture Guard) 개인정보처리방침</h1>
+        <p class="date">시행일: 2026년 2월 1일</p>
 
         <h2>1. 개인정보의 수집 및 이용 목적</h2>
-        <p>본 앱은 사용자의 자세 교정을 돕기 위해 카메라를 사용하여 실시간으로 자세를 분석합니다. 수집된 정보는 다음 목적으로만 사용됩니다:</p>
+        <p>본 앱은 스마트폰 카메라를 활용하여 실시간으로 사용자의 자세를 분석하고, 나쁜 자세 감지 시 알림을 제공합니다. 수집하는 정보의 이용 목적은 다음과 같습니다:</p>
         <ul>
             <li>실시간 자세 분석 및 교정 알림 제공</li>
-            <li>앱 서비스 개선</li>
+            <li>세션 통계 (모니터링 시간, 알림 횟수) 저장</li>
+            <li>앱 설정 유지 (민감도, 진동 패턴 등)</li>
         </ul>
 
         <h2>2. 수집하는 개인정보 항목</h2>
         <ul>
-            <li><strong>카메라 데이터</strong>: 자세 분석을 위해 기기의 카메라에 접근합니다. 카메라 영상은 기기 내에서만 처리되며 외부 서버로 전송되지 않습니다.</li>
-            <li><strong>앱 사용 데이터</strong>: 앱 개선을 위한 익명화된 사용 통계</li>
+            <li><strong>카메라 데이터</strong>: 자세 분석을 위해 전면 카메라를 사용합니다. 카메라 영상은 기기 내에서만 실시간 처리되며, 외부 서버로 전송되지 않습니다.</li>
+            <li><strong>앱 사용 데이터</strong>: 모니터링 세션 시간, 알림 횟수 등의 통계가 기기 내 로컬 저장소에만 저장됩니다.</li>
+            <li><strong>광고 식별자</strong>: Google AdMob을 통한 광고 표시를 위해 익명화된 광고 식별자가 사용될 수 있습니다.</li>
         </ul>
 
         <h2>3. 개인정보의 보유 및 이용 기간</h2>
-        <p>카메라 데이터는 실시간 분석에만 사용되며 저장되지 않습니다. 앱 설정 데이터는 사용자가 앱을 삭제할 때까지 기기 내에 보관됩니다.</p>
+        <p>카메라 데이터는 실시간 분석에만 사용되며 저장되지 않습니다. 앱 설정 및 세션 통계는 기기 로컬에만 저장되며, 앱 삭제 시 함께 삭제됩니다.</p>
 
         <h2>4. 개인정보의 제3자 제공</h2>
-        <p>본 앱은 사용자의 개인정보를 제3자에게 제공하지 않습니다. 단, 광고 서비스(Google AdMob)를 위해 익명화된 광고 식별자가 사용될 수 있습니다.</p>
+        <p>본 앱은 개인정보를 제3자에게 제공하지 않습니다. 단, 광고 서비스(Google AdMob)를 통해 익명화된 광고 식별자가 사용될 수 있습니다.</p>
 
         <h2>5. 광고</h2>
         <p>본 앱은 Google AdMob을 통해 광고를 표시합니다. Google의 개인정보처리방침은 <a href="https://policies.google.com/privacy" target="_blank">여기</a>에서 확인하실 수 있습니다.</p>
 
         <h2>6. 이용자의 권리</h2>
-        <p>사용자는 언제든지 앱 설정에서 카메라 접근 권한을 해제하거나, 앱을 삭제하여 모든 데이터를 삭제할 수 있습니다.</p>
+        <p>사용자는 언제든지 앱 설정에서 카메라 권한을 해제하거나, 앱을 삭제하여 모든 데이터를 삭제할 수 있습니다.</p>
 
         <h2>7. 개인정보 보호책임자</h2>
         <p>개인정보 관련 문의사항이 있으시면 아래 연락처로 문의해 주세요:</p>
         <ul>
-            <li>이메일: allofdaniel@naver.com</li>
+            <li>이메일: caesarkorean@gmail.com</li>
         </ul>
 
         <h2>8. 개인정보처리방침 변경</h2>
         <p>본 개인정보처리방침은 법령 및 서비스 변경에 따라 수정될 수 있으며, 변경 시 앱 내 공지를 통해 안내드립니다.</p>
+        </div>
+
+        <!-- English -->
+        <div class="en">
+        <h1>Posture Guard - Privacy Policy</h1>
+        <p class="date">Effective: February 1, 2026</p>
+
+        <h2>1. Purpose of Data Collection</h2>
+        <p>This app uses your smartphone camera to analyze your posture in real-time and provide alerts when poor posture is detected. Collected information is used for:</p>
+        <ul>
+            <li>Real-time posture analysis and correction alerts</li>
+            <li>Session statistics (monitoring duration, alert count)</li>
+            <li>App settings persistence (sensitivity, vibration patterns, etc.)</li>
+        </ul>
+
+        <h2>2. Types of Data Collected</h2>
+        <ul>
+            <li><strong>Camera Data</strong>: The front camera is used for posture analysis. Camera footage is processed entirely on-device in real-time and is never transmitted to external servers.</li>
+            <li><strong>App Usage Data</strong>: Session duration, alert counts, and other statistics are stored only in local device storage.</li>
+            <li><strong>Advertising Identifier</strong>: An anonymized advertising identifier may be used for displaying ads through Google AdMob.</li>
+        </ul>
+
+        <h2>3. Data Retention</h2>
+        <p>Camera data is used only for real-time analysis and is not stored. App settings and session statistics are stored locally on the device and are deleted when the app is uninstalled.</p>
+
+        <h2>4. Third-Party Data Sharing</h2>
+        <p>This app does not share personal information with third parties. However, anonymized advertising identifiers may be used through the advertising service (Google AdMob).</p>
+
+        <h2>5. Advertising</h2>
+        <p>This app displays ads through Google AdMob. You can review Google's Privacy Policy <a href="https://policies.google.com/privacy" target="_blank">here</a>.</p>
+
+        <h2>6. User Rights</h2>
+        <p>Users can revoke camera permissions in device settings at any time, or delete all data by uninstalling the app.</p>
+
+        <h2>7. Contact</h2>
+        <p>For privacy-related inquiries, please contact:</p>
+        <ul>
+            <li>Email: caesarkorean@gmail.com</li>
+        </ul>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>This Privacy Policy may be updated to reflect changes in law or service updates. Users will be notified of changes through the app.</p>
+        </div>
     </div>
 </body>
 </html>
